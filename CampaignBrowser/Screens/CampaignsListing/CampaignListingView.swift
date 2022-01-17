@@ -24,6 +24,13 @@ class CampaignListingView: UICollectionView {
         strongDataSource = campaignDataSource
         reloadData()
     }
+    
+    /**
+     Set estimated item size for collection view flow layout
+     */
+    func setFlowLayoutItemSize() {
+        flowLayout.estimatedItemSize = CGSize(width: 1,height: 1)
+    }
 
     struct Campaign {
         let name: String
@@ -79,11 +86,6 @@ class ListingDataSource: NSObject, UICollectionViewDataSource, UICollectionViewD
             assertionFailure("The cell should a CampaignCell")
         }
         return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 450)
     }
 
 }

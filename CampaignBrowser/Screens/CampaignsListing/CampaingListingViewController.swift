@@ -18,7 +18,9 @@ class CampaignListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .white
         assert(typedView != nil)
+        typedView.setFlowLayoutItemSize()
     }
 
     override func viewWillAppear(_ animated: Bool) {

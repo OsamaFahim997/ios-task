@@ -43,6 +43,7 @@ class CampaignCell: UICollectionViewCell {
     var descriptionText: String? {
         didSet {
             descriptionLabel?.text = descriptionText
+            descriptionLabel?.adjustsFontSizeToFitWidth = true
         }
     }
 
