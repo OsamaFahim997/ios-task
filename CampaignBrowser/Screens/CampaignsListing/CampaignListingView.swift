@@ -7,6 +7,8 @@ import RxSwift
  */
 class CampaignListingView: UICollectionView {
 
+    @IBOutlet private weak var flowLayout: UICollectionViewFlowLayout!
+    
     /**
      A strong reference to the view's data source. Needed because the view's dataSource property from UIKit is weak.
      */

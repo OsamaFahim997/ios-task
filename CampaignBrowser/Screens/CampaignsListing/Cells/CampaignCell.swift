@@ -18,6 +18,9 @@ class CampaignCell: UICollectionViewCell {
     /** The image view which is used to display the campaign's mood image. */
     @IBOutlet private(set) weak var imageView: UIImageView!
 
+    /** The width constraint for imageView which is used to render to it's maximum width according to screen size*/
+    @IBOutlet private(set) weak var imageViewWidthConstraint: NSLayoutConstraint!
+    
     /** The mood image which is displayed as the background. */
     var moodImage: Observable<UIImage>? {
         didSet {
